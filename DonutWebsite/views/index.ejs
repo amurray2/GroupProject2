@@ -1,0 +1,59 @@
+<!-- <html>
+
+<head></head>
+
+<body>
+    <h2>All Donut List</h2>
+    <ul>
+        <% for (let i=0;i < result.length; i++) { %>
+            <li>
+                <%= result[i].donut_name %>
+            </li>
+            <% } %>
+    </ul>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PDC Donut</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center" style="background-color: lightblue">
+        <h1 style="color: coral;"><%= page %> Donuts</h1>
+        <br><br>
+        <div class="row justify-content-center">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2"><a href="/donuts" style="font-size: 25px; color: black;">All</a></div>
+            <div class="col-sm-2"><a href="/glazed" style="font-size: 25px; color: black;">Glazed</a></div>
+            <div class="col-sm-2"><a href="/iced" style="font-size: 25px; color: black;">Iced</a></div>
+            <div class="col-sm-2"><a href="/filled" style="font-size: 25px; color: black;">Filled</a></div>
+            <div class="col-sm-2"><a href="/cake" style="font-size: 25px; color: black;">Cake</a></div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <% for (let i=0;i < result.length; i++) { %>
+            <div class="col-sm-4 text-center">
+                <h3>
+                    <%= result[i].donut_name %>
+                </h3>
+                <img src=<%=result[i].image_url %>>
+                <hr>
+            </div>
+            <%}%>
+    </div>
+
+</body>
+
+</html>
