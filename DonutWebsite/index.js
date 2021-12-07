@@ -15,7 +15,7 @@ const knex = require("knex")({
 });
 
 app.get("/", (req,res) => {
-    res.send("This is your timecard page <br/><a href='/donuts'>See Donuts</a>");
+    res.send("This is your Donut page <br/><a href='/donuts'>See Donuts</a>");
 });
 
 app.get("/donuts", (req,res) => {
